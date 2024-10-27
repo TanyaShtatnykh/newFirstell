@@ -8,8 +8,13 @@ $(function () {
   $(startBtn).on('click', function () {
     $(popup).addClass('popup--open');
 
+    if ($(window).width() < 992 && $(popup).hasClass('popup--open')) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
     $(window).on('resize', function() {
-      if ($(window).width() < 992) {
+      if ($(window).width() < 992 && $(popup).hasClass('popup--open')) {
         document.body.style.overflow = 'hidden';
       } else {
         document.body.style.overflow = '';
@@ -23,6 +28,7 @@ $(function () {
     $('.popup__info').removeClass('popup__info--hidden');
     $('.popup__succsess-text').removeClass('popup__succsess-text--visible');
     $('.popup__send-btn').removeClass('popup__send-btn--hidden');
+    document.body.style.overflow = '';
   };
 
   /*закрытие попапа нажатием на крестик*/
