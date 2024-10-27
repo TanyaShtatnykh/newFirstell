@@ -1,0 +1,136 @@
+.portfolio {
+  &__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 120px 190px;
+  }
+  &__title {
+    margin-bottom: 52px;
+    font-size: px-to-em(38);
+    line-height: lh-to-pct(55, 38);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: #DF1B36;
+  }
+  &__slider {
+    max-width: 100%;
+    &::after {
+      content: "";
+      position: absolute;
+      display: flex;
+      width: 80%;
+      height: auto;
+      top: 10%;
+      right: 0;
+      bottom: 0;
+      border: 9px solid transparent;
+      border-radius: 0px 100px 0px 100px;
+      background: linear-gradient(#fcfcfc,#fcfcfc) padding-box, linear-gradient(to bottom right, #515267, #DF1B36) border-box;
+      z-index: -1;
+      box-sizing: border-box;
+    }
+  }
+  .owl-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -50px;
+    gap: 20px;
+  }
+  .owl-item {
+    .slide {
+      position: relative;
+      z-index: -5;
+      opacity: 0;
+    }
+  }
+  .owl-item.active {
+    .slide {
+      z-index: 2;
+      opacity: 1;
+    }
+  }
+  @media screen and (max-width: 1399.98px) {
+    &__area {
+      padding: 0px 100px 160px;
+    }
+  }
+  @media screen and (max-width: 1199.98px) {
+    &__area {
+      padding: 0px 80px 140px;
+    }
+    &__title {
+      margin-bottom: 32px;
+    }
+    &__slider {
+      &::after {
+        top: 20%;
+      }
+    }
+  }
+  @media screen and (max-width: 991.98px) {
+    &__title {
+      font-size: px-to-em(32);
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &__area {
+      padding: 0px 80px 120px;
+    }
+    &__title {
+      font-size: px-to-em(28);
+    }
+    &__slider {
+      &::after {
+        top: 60px;
+      }
+    }
+    .owl-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: -40px;
+      gap: 20px;
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    &__area {
+      padding: 0px 12px 60px;
+    }
+    &__title {
+      margin-bottom: 12px;
+      font-size: px-to-em(20);
+    }
+    &__slider {
+      &::after {
+        display: none;
+      }
+    }
+    .owl-dots {
+      display: flex;
+      justify-content: center;
+      z-index: 5;
+    }
+    .owl-dot {
+      width: 14px;
+      height: 14px;
+      margin: 0 6px;
+      border-radius: 50%;
+      background: #515267 !important;
+      opacity: 0.2;
+    }
+    .owl-dot.active {
+      opacity: 1;
+    }
+  }
+  @media screen and (max-width: 359.98px) {
+    &__area {
+      padding: 0px 12px 32px;
+    }
+  }
+}

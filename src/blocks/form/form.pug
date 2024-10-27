@@ -1,0 +1,10 @@
+mixin form(modifier)
+  section.form&attributes(attributes)#discuss
+    h2.form__title We want to be №1 in achieving our clients' goals
+    h3.form__subtitle Describe your project so we can prepare a proposal
+    form.form__form
+      input(type="text" placeholder="Your name" required).form__field
+      input(type="email" placeholder="Your email" required).form__field
+      input(type="tel" placeholder="Your phone number" required).form__field
+      input(type="text" placeholder="Describe your project").form__field
+      button.form__btn(type=submit) Send

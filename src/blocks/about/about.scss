@@ -1,0 +1,122 @@
+.about {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1440px;
+    margin: -40px auto 0;
+    padding: 0px 120px 150px;
+    column-gap: 10px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  &__icon-box {
+    display: flex;
+    margin-bottom: 14px;
+    padding: 25px;
+    border-radius: 50%;
+    background-color: #515267;
+  }
+  &__icon {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
+  }
+  &__text {
+    font-size: 1em;
+    line-height: lh-to-pct(23, 16);
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    color: #515267;
+  }
+  @media screen and (max-width: 1399.98px) {
+    &__list {
+      padding: 0px 100px 120px;
+    }
+  }
+  @media screen and (max-width: 1199.98px) {
+    &__list {
+      padding: 0px 80px 100px;
+    }
+    &__item {
+      max-width: 210px;
+    }
+    &__text {
+      font-size: px-to-em(14);
+    }
+  }
+  @media screen and (max-width: 991.98px) {
+    &__icon-box {
+      padding: 20px;
+    }
+    &__icon {
+      max-width: 40px;
+      max-height: 40px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &__list {
+      margin: -30px auto 0;
+      padding: 0px 80px 80px;
+    }
+    &__icon-box {
+      margin-bottom: 10px;
+      padding: 20px;
+    }
+    &__icon {
+      max-width: 30px;
+      max-height: 30px;
+    }
+    &__text {
+      font-size: px-to-em(10);
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0 auto;
+      padding: 12px 12px 60px;
+      gap: 16px;
+    }
+    &__item {
+      flex-direction: row;
+      align-items: center;
+      max-width: 100%;
+      margin: 0;
+    }
+    &__icon-box {
+      margin: 0 10px 0 0;
+      padding: 16px;
+    }
+    &__icon {
+      max-width: 24px;
+      max-height: 24px;
+    }
+    &__text {
+      text-align: left;
+    }
+  }
+  @media screen and (max-width: 359.98px) {
+    &__list {
+      padding: 12px 12px 32px;
+    }
+    &__icon-box {
+      margin: 0 6px 0 0;
+      padding: 10px;
+    }
+    &__icon {
+      max-width: 16px;
+      max-height: 16px;
+    }
+    &__text {
+      font-size: px-to-em(8);
+    }
+  }
+}

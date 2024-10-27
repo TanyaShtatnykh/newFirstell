@@ -1,0 +1,309 @@
+.tariffs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 120px 150px;
+  
+  &__title {
+    margin-bottom: 52px;
+    font-size: px-to-em(38);
+    line-height: lh-to-pct(55, 38);
+    text-transform: uppercase;
+    text-align: center;
+    color: #DF1B36;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 0 12px;
+    border-radius: 40px 0px 20px 0px;
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+    background: #e7e7e7;
+  }
+  &__name {
+    margin-bottom: 12px;
+    padding: 0 16px;
+    font-size: px-to-em(26);
+    font-weight: 700;
+    line-height: lh-to-pct(55, 38);
+    text-align: center;
+    text-transform: uppercase;
+    color: #515267;
+  }
+  &__subname {
+    padding: 0 16px;
+    margin-bottom: 12px;
+    font-size: px-to-em(18);
+    font-weight: 400;
+    line-height: lh-to-pct(29, 20);
+    text-align: center;
+    color: #515267;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 44px;
+  }
+  &__old-price {
+    font-size: px-to-em(22);
+    font-weight: 300;
+    line-height: lh-to-pct(49, 34);
+    text-decoration-line: line-through;
+    color: #515267;
+  }
+  &__new-price {
+    font-size: px-to-em(32);
+    font-weight: 900;
+    line-height: lh-to-pct(69, 48);
+    text-align: right;
+    color: #515267;
+  }
+  &__runtime-name {
+    display: flex;
+    align-items: center;
+    font-size: px-to-em(20);
+    font-weight: 600;
+    line-height: lh-to-pct(38, 26);
+    color: #515267;
+    svg {
+      margin-right: 8px;
+      padding-bottom: 1px;
+    }
+  }
+  &__runtime-time {
+    font-size: px-to-em(18);
+    font-weight: 400;
+    line-height: lh-to-pct(29, 20);
+    color: #515267;
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+    padding: 0 16px;
+    font-size: px-to-em(18);
+    font-weight: 300;
+    line-height: lh-to-pct(29, 20);
+    color: #515267;
+    text-align: center;
+    &::before {
+      content: "";
+      max-width: 100%;
+      height: 2px;
+      margin: 18px 44px;
+      background-color: rgba(81, 82, 103, 0.4);
+      transition: 0.5s;
+    }
+  }
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 280px;
+    padding: 10px 26px;
+    border-radius: 20px 0px 20px 0px;
+    border: 2px solid #515267;
+    background-color: #515267;
+    font-size: px-to-em(20);
+    font-weight: 500;
+    line-height: lh-to-pct(38, 26);
+    color: #fff !important;
+    text-align: center;
+    text-decoration: none;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 4px;
+    }
+    &:hover {
+      background-color: #fff;
+      color: #515267 !important;
+      svg {
+        path {
+          fill: #515267;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 992px) {
+    &__item {
+      &--active, &:hover {
+        background: #DF1B36;
+        .tariffs__runtime-name {
+          path {
+            fill: #fff;
+          }
+        }
+        .tariffs__description::before {
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+        .tariffs__btn:hover {
+          color: #515267 !important;
+        }
+      }
+      &--active *, &:hover * {
+        color: #fff !important;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  @media screen and (max-width: 1399.98px) {
+    padding: 0px 100px 120px;
+  }
+  @media screen and (max-width: 1199.98px) {
+    padding: 0px 80px 100px;
+    &__title {
+      margin-bottom: 32px;
+    }
+    &__name {
+      font-size: px-to-em(24);
+    }
+    &__subname {
+      font-size: px-to-em(16);
+    }
+    &__old-price {
+      font-size: px-to-em(20);
+    }
+    &__new-price {
+      font-size: px-to-em(30);
+    }
+    &__runtime-name {
+      font-size: px-to-em(18);
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 4px;
+        padding-bottom: 0;
+      }
+    }
+    &__runtime-time {
+      font-size: px-to-em(16);
+    }
+    &__btn {
+      min-width: 236px;
+      font-size: px-to-em(16);
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__description {
+      font-size: px-to-em(16);
+    }
+  }
+  @media screen and (max-width: 991.98px) {
+    &__title {
+      font-size: px-to-em(32);
+    }
+    &__list {
+      column-gap: 20px;
+    }
+    &__item {
+      &--active {
+        background: #DF1B36;
+        .tariffs__runtime-name {
+          path {
+            fill: #fff;
+          }
+        }
+        .tariffs__description::before {
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+      }
+      &--active * {
+        color: #fff;
+      }
+    }
+    &__name {
+      margin-bottom: 6px;
+      font-size: px-to-em(20);
+    }
+    &__subname {
+      font-size: px-to-em(14);
+    }
+    &__box {
+      padding: 0px 30px;
+    }
+    &__old-price {
+      font-size: px-to-em(16);
+    }
+    &__new-price {
+      font-size: px-to-em(24);
+    }
+    &__runtime-name {
+      font-size: px-to-em(16);
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__runtime-time {
+      font-size: px-to-em(16);
+    }
+    &__btn {
+      min-width: auto;
+      padding: 8px 36px;
+      font-size: px-to-em(16);
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &__description {
+      font-size: px-to-em(14);
+      &::before {
+        margin: 14px 30px;
+      }
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    padding: 0px 80px 80px;
+    &__list {
+      max-width: 90%;
+      grid-template-columns: 1fr;
+      gap: 20px 0;
+    }
+    &__list br {
+      display: none;
+    }
+    &__title {
+      font-size: px-to-em(28);
+    }
+    &__btn {
+      padding: 6px 50px;
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    padding: 0px 12px 60px;
+    &__title {
+      margin-bottom: 12px;
+      font-size: px-to-em(20);
+    }
+    &__name {
+      font-size: px-to-em(18);
+    }
+  }
+  @media screen and (max-width: 359.98px) {
+    padding: 0px 12px 42px;
+    &__item {
+      padding: 26px 0 10px;
+    }
+    &__box {
+      padding: 0 16px;
+    }
+  }
+}

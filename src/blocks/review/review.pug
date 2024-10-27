@@ -1,0 +1,6 @@
+mixin review(logo, name, text)
+  .review&attributes(attributes)
+    .review__image-block: img.review__logo(src=`img/${logo}`, alt="Partner's logo")
+    .review__content-block
+      h3.review__name=name
+      p.review__text=text

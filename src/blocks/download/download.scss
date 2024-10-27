@@ -1,0 +1,115 @@
+.download {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 120px 150px;
+
+  &__area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    border-radius: 40px 0 40px 0;
+    background-color: #515267;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px 0 0 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+  }
+  &__title {
+    margin-bottom: 12px;
+    font-size: px-to-em(26);
+    line-height: lh-to-pct(38, 28);
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__subtitle {
+    margin-bottom: 12px;
+    font-size: px-to-em(16);
+    line-height: lh-to-pct(23, 16);
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &__button {
+    padding: 8px 92px;
+    border-radius: 12px 0px 12px 0px;
+    border: 2px solid #df1b36;
+    background-color: #df1b36;
+    font-size: px-to-em(16);
+    line-height: lh-to-pct(23, 16);
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+  }
+  &__button:hover {
+    background-color: #fff;
+    border-color: #515267;
+    color: #515267;
+  }
+  @media screen and (max-width: 1399.98px) {
+    padding: 0px 100px 120px;
+  }
+  @media screen and (max-width: 1199.98px) {
+    padding: 0px 80px 100px;
+  }
+  @media screen and (max-width: 991.98px) {
+    &__title {
+      margin-bottom: 10px;
+      font-size: px-to-em(20);
+    }
+    &__subtitle {
+      margin-bottom: 10px;
+      font-size: px-to-em(14);
+    }
+    &__button {
+      padding: 8px 70px;
+      font-size: px-to-em(14);
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    padding: 0px 80px 80px;
+    &__area {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    padding: 0px 12px 60px;
+    &__title {
+      font-size: px-to-em(18);
+    }
+    &__subtitle {
+      font-size: px-to-em(12);
+    }
+    &__button {
+      padding: 8px 92px;
+      border-radius: 22px 0px 22px 0px;
+      font-size: px-to-em(14);
+    }
+  }
+  @media screen and (max-width: 359.98px) {
+    padding: 0px 12px 32px;
+    &__title {
+      font-size: px-to-em(16);
+    }
+    &__button {
+      padding: 8px 70px;
+      border-radius: 22px 0px 22px 0px;
+      font-size: px-to-em(14);
+    }
+  }
+}

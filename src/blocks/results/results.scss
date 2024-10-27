@@ -1,0 +1,132 @@
+.results {
+  background-color: #DF1B36;
+  &__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 60px 120px; 
+  }
+  &__title {
+    margin-bottom: 32px;
+    font-size: px-to-em(38);
+    line-height: lh-to-pct(75, 52);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fcfcfc;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    counter-reset: section;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: px-to-em(24); 
+    line-height: lh-to-pct(32, 26); 
+    font-weight: 700; 
+    color: rgba(252, 252, 252, 0.7);
+  }
+  &__item::before {
+    counter-increment: section; 
+    content: "0"counter(section)"";
+    font-size: px-to-em(80); 
+    line-height: (173, 120); 
+    font-weight: 700; 
+    color: #fcfcfc; 
+  }
+  &__item:not(:first-of-type)::before {
+    margin-right: 30px; 
+  }
+  &__item:first-of-type::before {
+    margin-right: 44px; 
+  }
+  @media (max-width: 1399.98px) {
+    &__list {
+      gap: 40px 70px;
+    }
+    &__item::before {
+      font-size: px-to-em(60); 
+    }
+  }
+  @media (max-width: 1199.98px) {
+    &__area {
+      padding: 40px 80px;
+    }
+    &__title {
+      font-size: px-to-em(38);
+    }
+    &__item {
+      font-size: px-to-em(20);
+    }
+    &__item::before {
+      font-size: px-to-em(50); 
+    }
+    &__item:first-of-type::before {
+      margin-right: 36px; 
+    }
+  }
+  @media (max-width: 991.98px) {
+    &__title {
+      margin-bottom: 30px;
+      font-size: px-to-em(32);
+    }
+    &__list {
+      gap: 30px 50px;
+    }
+    &__item {
+      font-size: px-to-em(18);
+    }
+    &__item:not(:first-of-type)::before {
+      margin-right: 20px; 
+    }
+    &__item:first-of-type::before {
+      margin-right: 28px; 
+    }
+  }
+  @media (max-width: 767.98px) {
+    &__title {
+      margin-bottom: 36px;
+      font-size: px-to-em(30);
+    }
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 60px;
+    }
+  }
+  @media (max-width: 575.98px) {
+    &__area {
+      padding: 40px 26px;
+    }
+    &__title {
+      margin-bottom: 26px;
+      font-size: px-to-em(24);
+    }
+    &__list {
+      gap: 26px;
+    }
+    &__item {
+      font-size: px-to-em(16);
+      color: #fcfcfc;
+    }
+    &__item::before {
+      font-size: px-to-em(40); 
+    }
+    &__item:first-of-type::before {
+      margin-right: 26px; 
+    }
+  }
+  @media (max-width: 359.98px) {
+    &__title {
+      font-size: px-to-em(16);
+    }
+    &__item {
+      font-size: px-to-em(14);
+    }
+  }
+}

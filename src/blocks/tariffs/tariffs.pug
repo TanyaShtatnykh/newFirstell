@@ -1,0 +1,51 @@
+mixin tariffs(modifier)
+  setcion.tariffs&attributes(attributes)
+    h2.tariffs__title Fix the price of the project and start discussing&nbsp;now
+    ul.tariffs__list
+      li.tariffs__item 
+        h3.tariffs__name working with content
+        p.tariffs__subname Подзаголовок
+        .tariffs__box
+          p.tariffs__old-price 99.99
+          p.tariffs__new-price 89.99
+        .tariffs__box
+          p.tariffs__runtime-name
+            include ./img/runtime.svg
+            | Runtime
+          p.tariffs__runtime-time 7 days
+        p.tariffs__description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+        a.tariffs__btn(href="#discuss")
+          include ./img/tariffsbtn.svg
+          | Buy
+      
+      li.tariffs__item.tariffs__item--active
+        h3.tariffs__name slide <br>redesign
+        p.tariffs__subname Подзаголовок
+        .tariffs__box
+          p.tariffs__old-price 99.99
+          p.tariffs__new-price 89.99
+        .tariffs__box
+          p.tariffs__runtime-name 
+            include ./img/runtime.svg
+            | Runtime
+          p.tariffs__runtime-time 7 days
+        p.tariffs__description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+        a.tariffs__btn(href="#discuss")
+          include ./img/tariffsbtn.svg
+          | Buy
+      
+      li.tariffs__item
+        h3.tariffs__name Building a presentation
+        p.tariffs__subname Подзаголовок
+        .tariffs__box
+          p.tariffs__old-price 99.99
+          p.tariffs__new-price 89.99
+        .tariffs__box
+          p.tariffs__runtime-name
+            include ./img/runtime.svg
+            | Runtime
+          p.tariffs__runtime-time 7 days
+        p.tariffs__description Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+        a.tariffs__btn(href="#discuss")
+          include ./img/tariffsbtn.svg
+          | Buy

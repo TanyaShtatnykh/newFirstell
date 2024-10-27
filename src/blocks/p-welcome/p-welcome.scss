@@ -1,0 +1,130 @@
+.p-welcome {
+  position: relative;
+  padding: 334px 0 100px;
+  &__banner {
+    position: absolute;
+    top: -60%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  &__area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  &__title {
+    font-size: px-to-em(64);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+  }
+  &__subtitle {
+    max-width: 500px;
+    margin-bottom: 20px;
+    font-size: px-to-em(28);
+    font-weight: 400;
+    text-align: center;
+    color: #ffffff;
+  }
+  @media screen and (max-width: 1919.98px) {
+    &__banner {
+      top: -40%;
+    }
+  }
+  @media screen and (max-width: 1599.98px) {
+    &__banner {
+      top: -30%;
+    }
+  }
+  @media screen and (max-width: 1440.98px) {
+    &__banner {
+      top: -16%;
+    }
+  }
+  @media screen and (max-width: 1199.98px) {
+    &__banner {
+      top: 0;
+    }
+    &__title {
+      font-size: px-to-em(60);
+    }
+    &__subtitle {
+      font-size: px-to-em(26);
+    }
+  }
+  @media screen and (max-width: 991.98px) {
+    padding: 230px 0 0px;
+    &__banner {
+      top: -10%;
+    }
+    &__title {
+      font-size: px-to-em(48);
+    }
+    &__subtitle {
+      margin-bottom: 12px;
+      font-size: px-to-em(24);
+    }
+    svg {
+      width: auto;
+      height: 40px;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &__banner {
+      top: 10%;
+    }
+    &__title {
+      font-size: px-to-em(36);
+    }
+    &__subtitle {
+      margin-bottom: 12px;
+      font-size: px-to-em(20);
+    }
+    svg {
+      width: auto;
+      height: 40px;
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    padding: 180px 0 0;
+    &__banner {
+      top: 10%;
+    }
+    &__title {
+      font-size: px-to-em(28);
+    }
+    &__subtitle {
+      font-size: px-to-em(16);
+    }
+    svg {
+      height: 20px;
+    }
+  }
+  @media screen and (max-width: 449.98px) {
+    padding: 130px 0 0;
+    &__banner {
+      top: 4%;
+    }
+    &__title {
+      font-size: px-to-em(22);
+    }
+    &__subtitle {
+      font-size: px-to-em(12);
+    }
+    svg {
+      height: 20px;
+    }
+  }
+  @media screen and (max-width: 359.98px) {
+    &__banner {
+      top: 16%;
+    }
+  }
+}

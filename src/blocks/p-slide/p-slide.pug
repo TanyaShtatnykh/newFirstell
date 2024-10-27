@@ -1,0 +1,19 @@
+mixin p-slide(modifier)
+  .p-slide&attributes(attributes)
+    .p-slide__slider.swiper
+      .swiper-wrapper.child
+        .swiper-slide(lazy="true")
+          img.p-slide__image(src="img/pslide1.png", alt="" loading="lazy")
+          .swiper-lazy-preloader
+        .swiper-slide(lazy="true")
+          img.p-slide__image(src="img/pslide1.png", alt="" loading="lazy")
+          .swiper-lazy-preloader
+        .swiper-slide(lazy="true")
+          img.p-slide__image(src="img/pslide1.png", alt="" loading="lazy")
+          .swiper-lazy-preloader
+      .p-slide__nav
+        .p-slide__arrow.p-slide__arrow--prev
+          include ./img/p-arrow-prev.svg
+        .p-slide__arrow.p-slide__arrow--next
+          include ./img/p-arrow-next.svg
+    h3.p-slide__title Presentation for the company align

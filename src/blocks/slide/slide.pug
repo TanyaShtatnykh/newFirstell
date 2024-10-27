@@ -1,0 +1,17 @@
+mixin slide(image, name, title, text)
+  .slide&attributes(attributes)
+    img(src=`img/${image}`, alt="").slide__image
+    .slide__content
+      p.slide__name=name
+      h3.slide__title=title
+      p.slide__description=text
+      .slide__results
+        .slide__iconbox
+          img.slide__icon(src="img/icon.png", alt="")
+          p.slide__results-text 10 days
+        .slide__iconbox
+          img.slide__icon(src="img/icon.png", alt="")
+          p.slide__results-text 10 days
+        .slide__iconbox
+          img.slide__icon(src="img/icon.png", alt="")
+          p.slide__results-text 10 daysdays

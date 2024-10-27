@@ -1,0 +1,102 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 120px 150px;
+
+  &__title {
+    margin-bottom: 52px;
+    font-size: px-to-em(38);
+    line-height: lh-to-pct(55, 38);
+    text-transform: uppercase;
+    text-align: center;
+    color: #DF1B36;
+  }
+  &__area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+    width: 100%;
+  }
+  &__btn {
+    display: none;
+  }
+  @media screen and (max-width: 1399.98px) {
+    padding: 0px 100px 120px;
+  }
+  @media screen and (max-width: 1199.98px) {
+    padding: 0px 80px 100px;
+    &__title {
+      margin-bottom: 32px;
+    }
+  }
+  @media screen and (max-width: 991.98px) {
+    &__area {
+      grid-template-columns: 1fr;
+      gap: 0px;
+    }
+    &__title {
+      font-size: px-to-em(32);
+    }
+    &__btn {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border: none;
+      background-color: transparent;
+      font-size: px-to-em(24);
+      line-height: lh-to-pct(27, 20);
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #515267;
+      cursor: pointer;
+      svg {
+        width: 17px;
+        height: 19px;
+        margin: 0 10px;
+      }
+      &--open {
+        span {
+          visibility: hidden;
+        }
+        svg {
+          transform: rotate(-180deg);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    padding: 0px 80px 80px;
+    &__title {
+      font-size: px-to-em(28);
+    }
+  }
+  @media screen and (max-width: 575.98px) {
+    padding: 0px 12px 60px;
+    &__title {
+      margin-bottom: 12px;
+      font-size: px-to-em(20);
+    }
+    &__btn {
+      padding: 6px 20px 10px;
+      font-size: px-to-em(14);
+      svg {
+        width: 15px;
+        height: 17px;
+        margin: 0px 6px;
+      }
+    }
+  }
+  @media screen and (max-width: 359.98px) {
+    padding: 0px 12px 32px;
+    &__title {
+      font-size: px-to-em(16);
+    }
+    &__btn {
+      padding-top: 0px;
+    }
+  }
+}

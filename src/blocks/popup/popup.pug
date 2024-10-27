@@ -1,0 +1,17 @@
+mixin popup(modifier)
+  .popup&attributes(attributes)#popup
+    .popup__area
+      button.popup__close-btn(type="button")
+        include ./img/btn-close.svg
+      .popup__wrapper
+        img.popup__image(src="img/popup-img.png", alt="")
+        .popup__info
+          h2.popup__title DOWNLOAD The GUIDEBOOK
+          p.popup__subtitle Jost fill in the form and get it now
+          form.popup__form(id="popup-form")
+            input.popup__field(type="text" placeholder="Your name")
+            input.popup__field(type="email" id="email" placeholder="Your email address*" required)
+        p.popup__succsess-text We will send you our guidebook on your email in the near future!
+      button.popup__send-btn(type="submit" form="popup-form")
+        | Send
+        include ./img/btn-send.svg

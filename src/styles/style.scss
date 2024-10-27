@@ -1,0 +1,62 @@
+@import 'mixins';
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #fcfcfc;
+}
+body, ul, ol {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+  z-index: 0;
+}
+ul, ol {
+  list-style: none;
+}
+button, input {
+  font-family: "Jost", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+}
+h1, h2 {
+  font-weight: 900;
+}
+h3, h4 {
+  font-weight: 800;
+}
+p {
+  font-weight: 500;
+}
+h1, h2, h3, h4, p {
+  margin: 0;
+  padding: 0;
+}
+@import './src/blocks/header/header';
+@import './src/blocks/welcome/welcome';
+@import './src/blocks/about/about';
+@import './src/blocks/service/service';
+@import './src/blocks/services/services';
+@import './src/blocks/portfolio/portfolio';
+@import './src/blocks/slide/slide';
+@import './src/blocks/pricelist/pricelist';
+@import './src/blocks/results/results';
+@import './src/blocks/partners/partners';
+@import './src/blocks/partners/partners';
+@import './src/blocks/reviews/reviews';
+@import './src/blocks/form/form';
+@import './src/blocks/footer/footer';
+@import './src/blocks/review/review';
+@import './src/blocks/p-welcome/p-welcome';
+@import './src/blocks/p-slide/p-slide';
+@import './src/blocks/p-slider/p-slider';
+@import './src/blocks/p-projects/p-projects';
+@import './src/blocks/download/download';
+@import './src/blocks/toppings/toppings';
+@import './src/blocks/tariffs/tariffs';
+@import './src/blocks/popup/popup';

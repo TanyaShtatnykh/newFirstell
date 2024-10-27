@@ -1,0 +1,9 @@
+mixin service(icon, title, text, number)
+  .service&attributes(attributes)
+    .service__area
+      if icon
+        img.service__icon(src=`img/${icon}`, alt="")
+      .service__content
+        h3.service__title=title
+        p.service__text=text
+    a.service__link(href=`portfolio.html#${number}`) Discuss

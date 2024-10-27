@@ -1,0 +1,21 @@
+mixin p-slider(title, number)
+  section.p-slider&attributes()(id=number)
+    .p-slider__heading
+      h2.p-slider__title=title
+      a.p-slider__discuss-btn(href="#discuss")
+        | Discuss the project
+        include ./img/discuss-icon.svg 
+    .p-slider__area
+      +p-slide
+      +p-slide
+      +p-slide
+      +p-slide
+      +p-slide
+      +p-slide
+      +p-slide
+      +p-slide
+      +p-slide
+    button.p-slider__more-btn(type="button") 
+      span More
+      include ./img/services-arrow.svg
+      span project
