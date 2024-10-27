@@ -7,6 +7,7 @@ $(function () {
   /*открытие попапа*/
   $(startBtn).on('click', function () {
     $(popup).addClass('popup--open');
+    document.body.style.overflow = 'hidden';
   });
 
   /*сброс всех классов до первоначального состояния*/
@@ -15,6 +16,7 @@ $(function () {
     $('.popup__info').removeClass('popup__info--hidden');
     $('.popup__succsess-text').removeClass('popup__succsess-text--visible');
     $('.popup__send-btn').removeClass('popup__send-btn--hidden');
+    document.body.style.overflow = 'auto';
   };
 
   /*закрытие попапа нажатием на крестик*/
