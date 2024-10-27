@@ -189,13 +189,15 @@
     &__title, &__subtitle, &__succsess-text {
       text-align: center;
     }
+    if .popup--open {
+      body {
+        overflow: hidden;
+      }
+    }
   }
   @media screen and (max-width: 575.98px) {
     padding: 0 30px;
     &__area {
-      position: relative;
-      top: 50px;
-      width: 100%;
       padding: 30px 10px 0;
     }
     &__close-btn {

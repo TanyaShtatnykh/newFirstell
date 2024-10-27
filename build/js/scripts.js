@@ -55,7 +55,14 @@ $(function () {
   /*открытие попапа*/
   $(startBtn).on('click', function () {
     $(popup).addClass('popup--open');
-    document.body.style.overflow = 'hidden';
+
+    $(window).on('resize', function() {
+      if ($(window).width() < 992) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    });
   });
 
   /*сброс всех классов до первоначального состояния*/
@@ -64,7 +71,6 @@ $(function () {
     $('.popup__info').removeClass('popup__info--hidden');
     $('.popup__succsess-text').removeClass('popup__succsess-text--visible');
     $('.popup__send-btn').removeClass('popup__send-btn--hidden');
-    document.body.style.overflow = 'auto';
   };
 
   /*закрытие попапа нажатием на крестик*/
@@ -97,6 +103,28 @@ $(function () {
   });
 });
 $(function () {
+  $('.portfolio__slider').owlCarousel({
+    items: 1,
+    loop: false,
+    autoplay: false,
+    smartSpeed: 1500,
+    autoHeight:true,
+    infiniti: false,
+    navText: ["<img src='img/arrow-back.svg'>", "<img src='img/arrow-next.svg'>"],
+    responsive: {
+      0: {
+        nav: false,
+        dots: true,
+      },
+      576: {
+        nav: true,
+        dots: false,
+      }
+    }
+  });
+});
+
+$(function () {
   $('.pricelist__container').owlCarousel({
     loop: true,
     autoplay: false,
@@ -120,28 +148,6 @@ $(function () {
     }
   });
 });
-$(function () {
-  $('.portfolio__slider').owlCarousel({
-    items: 1,
-    loop: false,
-    autoplay: false,
-    smartSpeed: 1500,
-    autoHeight:true,
-    infiniti: false,
-    navText: ["<img src='img/arrow-back.svg'>", "<img src='img/arrow-next.svg'>"],
-    responsive: {
-      0: {
-        nav: false,
-        dots: true,
-      },
-      576: {
-        nav: true,
-        dots: false,
-      }
-    }
-  });
-});
-
 
 
 $(function () {
