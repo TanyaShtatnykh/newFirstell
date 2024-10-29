@@ -22,7 +22,7 @@
     align-items: center;
     width: 100%;
     max-width: 1050px;
-    padding: 60px 75px 0;
+    padding: 60px 40px 0;
     border-radius: 60px 16px 20px 0px;
     background-color: #fff;
   }
@@ -48,11 +48,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    column-gap: 10px;
     padding-bottom: 60px;
   }
   &__image {
-    width: 50%;
-    max-width: 301px;
+    width: 45%;
+    height: auto;
     object-fit: contain;
   }
   &__info {
@@ -123,7 +124,7 @@
     align-items: center;
     column-gap: 12px;
     padding: 10px;
-    margin: 0 -75px;
+    margin: 0 -40px;
     outline: none;
     border: none;
     border-radius: 20px 0px 19px 0px;
@@ -155,7 +156,7 @@
       padding-bottom: 40px;
     }
     &__image {
-      width: 30%;
+      width: 40%;
     }
     &__title {
       font-size: px-to-em(28);
@@ -188,6 +189,9 @@
     }
     &__info {
       align-items: center;
+    }
+    &__image {
+      width: 50%;
     }
     &__title, &__subtitle, &__succsess-text {
       text-align: center;

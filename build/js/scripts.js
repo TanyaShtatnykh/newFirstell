@@ -1,6 +1,7 @@
 
 
 
+
 $(function () {
   $('.header__burger-btn').on('click', function() {
     $(this).toggleClass('header__burger-btn--open');
@@ -14,7 +15,6 @@ $(function () {
   })
 });
 
-
 const childrenSwiper = new Swiper('.p-slide__slider', {
   navigation: {
     nextEl: '.p-slide__arrow--next',
@@ -26,6 +26,7 @@ const childrenSwiper = new Swiper('.p-slide__slider', {
     loadOnTransitionStart: false,
   },
 });
+
 $(function () {
   $('.p-slider__more-btn').on('click', function() {
     $(this).parent('.p-slider').toggleClass('p-slider--open');
@@ -44,7 +45,6 @@ $(function () {
     }
   }
 });
-
 
 $(function () {
   var popup = $('.popup');
